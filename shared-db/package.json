@@ -1,0 +1,22 @@
+{
+  "name": "@capire/samples-shared-db",
+  "version": "2.1.0",
+  "description": "CAP Sample CDS model deployment for shared-db scenario",
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "hana",
+        "model": [
+          "../common",
+          "../bookstore",
+          "../data-viewer",
+          "../orders",
+          "../reviews"
+        ]
+      }
+    },
+    "sql": {
+      "native_hana_associations": false
+    }
+  }
+}

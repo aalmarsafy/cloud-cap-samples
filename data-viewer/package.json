@@ -3,11 +3,30 @@
   "version": "0.1.0",
   "description": "A generic browser for data",
   "dependencies": {
-    "@sap/cds": ">=5.0.4"
+    "@sap/cds": "*",
+    "@cap-js/hana": "^1",
+    "@sap/xssec": "^4"
   },
   "files": [
     "app",
     "srv",
     "index.cds"
-  ]
+  ],
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "hana",
+        "model": [
+          "../common",
+          "../bookstore",
+          "../data-viewer",
+          "../orders",
+          "../reviews"
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "start": "cds-serve"
+  }
 }
